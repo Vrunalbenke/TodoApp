@@ -23,12 +23,12 @@ export const styles = StyleSheet.create({
     },
     AddBtn: {
       alignSelf: 'center',
-      backgroundColor: 'grey',
+      backgroundColor: '#0081f1',
       padding: 10,
-      borderRadius: 10,
+      borderRadius: 7,
     },
     AddBtnText: {
-      fontWeight: '500',
+      fontWeight: '600',
       color: 'white',
     },
   });
