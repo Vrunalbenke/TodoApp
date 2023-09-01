@@ -6,4 +6,4 @@ export interface ITodoList {
   
   export interface IInitialState {
     todoList: ITodoList[] | [];
-  }
+  }  
