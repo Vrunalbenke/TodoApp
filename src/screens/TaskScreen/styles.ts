@@ -47,6 +47,11 @@ export const styles = StyleSheet.create({
       fontWeight: '600',
     },
   
-    ///===========
+    ///=========== Children
+    TodoTitle: {
+      fontSize: 25,
+      fontFamily: 'Poppins Bold Italic',
+      paddingBottom: 10,
+    },
     
   });

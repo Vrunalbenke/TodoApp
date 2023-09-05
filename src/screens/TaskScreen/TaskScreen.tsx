@@ -55,7 +55,7 @@ const TaskScreen = ({route, navigation}: TaskScreenNavigationProp) => {
           {allDays[day]},{date} {allMonths[month]}
         </Text>
       </View>
-      <TaskView navToAddScreen={navToAddScreen} />
+      <TaskView navToAddScreen={navToAddScreen}><Text style={styles.TodoTitle}>. </Text></TaskView>
       <TouchableOpacity
         style={styles.AddTaskContainer}
         onPress={() => navigation.navigate('AddScreen')}>

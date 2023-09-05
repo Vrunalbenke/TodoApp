@@ -21,11 +21,14 @@ interface IrenderList {
   index: number;
 }
 
-interface ITaskView {
+
+
+interface ITaskView  {
   navToAddScreen: (id: number) => void;
+  children : React.ReactNode;
 }
 
-const TaskView = (props: ITaskView) => {
+const TaskView = ({navToAddScreen,children}:ITaskView) => {
   const todos = useAppSelector(state => state.tasks.todoList);
 //   const todos2 = useAppSelector(state => state.tasks);
 const [isVisible,setIsVisible] = useState(false)
@@ -40,7 +43,7 @@ const [isVisible,setIsVisible] = useState(false)
   function handleEdit(id: number) {
     // navigation.navigate('AddScreen', {id: id});
     // console.log(id);
-    props.navToAddScreen(id);
+    navToAddScreen(id);
   }
 
   function handleModalCancel(){
@@ -61,7 +64,8 @@ const [isVisible,setIsVisible] = useState(false)
     return (
       <View style={styles.TodoContainer}>
         <View style={styles.titleContainer}>
-          <Text style={styles.TodoTitle}>{index + 1}.</Text>
+          <Text style={styles.TodoTitle}>{index + 1}</Text>
+          {children}
           <Text style={styles.TodoTitle}> {item.title}</Text>
         </View>
 
