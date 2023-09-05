@@ -25,7 +25,8 @@ interface IrenderList {
 
 interface ITaskView  {
   navToAddScreen: (id: number) => void;
-  children : React.ReactNode;
+  // children : React.ReactNode;
+  children : JSX.Element;
 }
 
 const TaskView = ({navToAddScreen,children}:ITaskView) => {
